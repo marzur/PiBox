@@ -1,0 +1,5 @@
+rootProject.name = 'PiBox'
+include 'PiCore'
+include 'PiData'
+include 'PiInstaller'
+
