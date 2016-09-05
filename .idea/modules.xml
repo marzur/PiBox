@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiBox.iml" filepath="$PROJECT_DIR$/.idea/modules/PiBox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiBox_main.iml" filepath="$PROJECT_DIR$/.idea/modules/PiBox_main.iml" group="PiBox" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiBox_test.iml" filepath="$PROJECT_DIR$/.idea/modules/PiBox_test.iml" group="PiBox" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiCore.iml" filepath="$PROJECT_DIR$/.idea/modules/PiCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiData/PiData.iml" filepath="$PROJECT_DIR$/.idea/modules/PiData/PiData.iml" group="PiData" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiData/PiData_main.iml" filepath="$PROJECT_DIR$/.idea/modules/PiData/PiData_main.iml" group="PiData" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiData/PiData_test.iml" filepath="$PROJECT_DIR$/.idea/modules/PiData/PiData_test.iml" group="PiData" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiInstaller/PiInstaller.iml" filepath="$PROJECT_DIR$/.idea/modules/PiInstaller/PiInstaller.iml" group="PiInstaller" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiInstaller/PiInstaller_main.iml" filepath="$PROJECT_DIR$/.idea/modules/PiInstaller/PiInstaller_main.iml" group="PiInstaller" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiInstaller/PiInstaller_test.iml" filepath="$PROJECT_DIR$/.idea/modules/PiInstaller/PiInstaller_test.iml" group="PiInstaller" />
+    </modules>
+  </component>
+</project>
