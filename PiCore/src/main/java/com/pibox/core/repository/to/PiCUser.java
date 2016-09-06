@@ -4,7 +4,6 @@ package com.pibox.core.repository.to;
  * Created by Marcin on 11.08.2016.
  */
 public class PiCUser {
-    @org.springframework.data.annotation.Id
     private String email;
     private String userName;
     private String userPassword;
