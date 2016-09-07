@@ -1,0 +1,15 @@
+group 'pl.picode'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.0'
+}
