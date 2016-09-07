@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.pibox.core.macos.MacOsRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-08-15T20:34:39" hostname="MacBook-Pro-Kamil-2.local" time="0.005">
-  <properties/>
-  <testcase name="createEmptyRepositoryTest" classname="com.pibox.core.macos.MacOsRepositoryTest" time="0.005"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
