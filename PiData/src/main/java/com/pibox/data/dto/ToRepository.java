@@ -1,11 +1,21 @@
 package com.pibox.data.dto;
 
+import org.springframework.data.annotation.Id;
+
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Marcin Żuralski on 15.08.2016.
  */
 public class ToRepository {
+
+    /**
+     *
+     */
+    @Id
+    private String id;
+
     /**
      * Main directory
      */
@@ -25,6 +35,11 @@ public class ToRepository {
      *
      */
     private Date dateCreated;
+
+    /**
+     * List of replicas (addresses)
+     */
+    private List<ToReplica> replicaList;
 
     public ToDirectory getMainDir() {
         return mainDir;
@@ -60,5 +75,25 @@ public class ToRepository {
     public ToRepository setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
         return this;
+    }
+
+    public List<ToReplica> getReplicaList() {
+        return replicaList;
+    }
+
+    public ToRepository setReplicaList(List<ToReplica> replicaList) {
+        this.replicaList = replicaList;
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return "ToRepository{" +
+                "id='" + id + '\'' +
+                ", mainDir=" + mainDir +
+                ", repositoryName='" + repositoryName + '\'' +
+                ", owner=" + owner +
+                ", dateCreated=" + dateCreated +
+                '}';
     }
 }

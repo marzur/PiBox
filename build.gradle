@@ -1,9 +1,7 @@
 group 'pl.picode'
-version '1.0-SNAPSHOT'
+version = new ProjectVersion(0, 1)
 
 repositories {
-    mavenCentral()
-    jcenter()
 }
 
 dependencies {
@@ -13,3 +11,46 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '3.0'
 }
+
+class ProjectVersion {
+    Integer major
+    Integer minor
+    Boolean release
+
+    ProjectVersion(Integer major, Integer minor, Boolean release) {
+        this.major = major
+        this.minor = minor
+        this.release = release
+    }
+
+    ProjectVersion(Integer major, Integer minor) {
+        this(major, minor, false)
+    }
+
+    String toString() {
+        "$major.$minor${release ? '' : '-SNAPSHOT'}"
+    }
+}
+
+task first << { println "first" }
+task second << { println "second" }
+
+task printVersion {
+    group = 'versioning'
+    description = 'Prints project version.'
+    dependsOn = [second, first]
+
+    doFirst {
+        println "Before reading the project version"
+    }
+
+    doLast {
+        println("Version: $version")
+    }
+}
+
+printVersion.doFirst { println "First action" }
+printVersion << { logger.quiet("Last action") }
+
+task third << { println "third" }
+third.finalizedBy('printVersion')
