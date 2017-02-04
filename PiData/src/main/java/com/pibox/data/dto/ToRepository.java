@@ -22,17 +22,17 @@ public class ToRepository {
     private ToDirectory mainDir;
 
     /**
-     *
+     * Repository name
      */
     private String repositoryName;
 
     /**
-     *
+     * Repository owner
      */
     private ToUser owner;
 
     /**
-     *
+     * Repository date created
      */
     private Date dateCreated;
 
@@ -40,6 +40,15 @@ public class ToRepository {
      * List of replicas (addresses)
      */
     private List<ToReplica> replicaList;
+
+    public String getId() {
+        return id;
+    }
+
+    public ToRepository setId(String id) {
+        this.id = id;
+        return this;
+    }
 
     public ToDirectory getMainDir() {
         return mainDir;
@@ -95,5 +104,25 @@ public class ToRepository {
                 ", owner=" + owner +
                 ", dateCreated=" + dateCreated +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ToRepository that = (ToRepository) o;
+
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (!owner.equals(that.owner)) return false;
+        return dateCreated.equals(that.dateCreated);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + owner.hashCode();
+        result = 31 * result + dateCreated.hashCode();
+        return result;
     }
 }

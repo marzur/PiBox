@@ -1,5 +1,7 @@
 package com.pibox.data.dto;
 
+import org.springframework.data.annotation.Id;
+
 import java.util.Date;
 
 /**
@@ -8,6 +10,9 @@ import java.util.Date;
  * A class represents a simple file stored at the local file system.
  */
 public class ToFile {
+
+    @Id
+    private String id;
 
     /**
      * File name
@@ -44,6 +49,14 @@ public class ToFile {
      */
     private long size;
 
+    public String getId() {
+        return id;
+    }
+
+    public ToFile setId(String id) {
+        this.id = id;
+        return this;
+    }
 
     public String getName() {
         return name;
@@ -106,5 +119,25 @@ public class ToFile {
     public ToFile setSize(long size) {
         this.size = size;
         return this;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ToFile)) return false;
+
+        ToFile toFile = (ToFile) o;
+
+        if (!name.equals(toFile.name)) return false;
+        if (parent != null ? !parent.equals(toFile.parent) : toFile.parent != null) return false;
+        return dateCreated.equals(toFile.dateCreated);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name.hashCode();
+        result = 31 * result + (parent != null ? parent.hashCode() : 0);
+        result = 31 * result + dateCreated.hashCode();
+        return result;
     }
 }

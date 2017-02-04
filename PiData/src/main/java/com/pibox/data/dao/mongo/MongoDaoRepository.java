@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
  * Created by Marcin Żuralski on 02.09.2016.
  */
 @Component("daoRepository")
-public interface MongoDaoRepository extends IDaoRepository<ToRepository, String>, MongoRepository<ToRepository, String> {
+public interface MongoDaoRepository extends IDaoRepository, MongoRepository<ToRepository, String> {
 
 }
