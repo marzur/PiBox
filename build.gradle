@@ -1,5 +1,4 @@
 group 'pl.picode'
-version = new ProjectVersion(0, 1)
 
 repositories {
 }
@@ -8,6 +7,29 @@ dependencies {
 
 }
 
+ext.versionFile = file('version.properties') // properties contains version of application
+
+task loadVersion {
+    project.version = readVersion()
+}
+
+ProjectVersion readVersion() {
+    logger.quiet 'Reading the version file.'
+
+    if (!versionFile.exists()) {
+        throw new GradleException("Required version file does not exists: $versionFile.canonicalPath")
+    }
+
+    Properties versionProps = new Properties()
+
+    versionFile.withInputStream {
+        stream -> versionProps.load(stream)
+    }
+
+    new ProjectVersion(versionProps.major.toInteger(), versionProps.minor.toInteger(), versionProps.release.toBoolean())
+}
+
+// WRAPPER FOR GRADLE PROJECT
 task wrapper(type: Wrapper) {
     gradleVersion = '3.0'
 }

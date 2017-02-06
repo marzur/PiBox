@@ -1,6 +1,6 @@
 package com.pibox.core.repository;
 
-import com.pibox.core.repository.to.PiCReposistory;
+import com.pibox.data.dto.ToRepository;
 
 /**
  * Created by Marcin Żuralski on 10.08.2016.
@@ -10,9 +10,9 @@ import com.pibox.core.repository.to.PiCReposistory;
 public interface IRepositoryManager {
 
     /**
-     * Method to create a simple repository
+     * Method to create physically a simple repository
      *
      * @param repository
      */
-    void createRespository(PiCReposistory repository);
+    void createRespository(ToRepository repository);
 }

@@ -2,4 +2,6 @@ rootProject.name = 'PiBox'
 include 'PiCore'
 include 'PiData'
 include 'PiInstaller'
+include 'PiTools'
+include 'PiTool'
 

@@ -1,0 +1,12 @@
+PiTool:
+  simplenode:
+    simpleStringValue: 'StringValue'
+    simpleIntValue: 3
+    simpleDoubleValue: 2.1
+    simpleBooleanValue: false
+  sequence:
+    - element1
+    - element2
+  mapNode:
+    - key1: value1
+    - key2: value2
