@@ -1,7 +1,8 @@
-package com.pibox.core.macos;
+package com.pibox.core.repository.macos;
 
 import com.pibox.core.repository.IRepositoryManager;
-import com.pibox.core.repository.to.PiCReposistory;
+import com.pibox.data.dto.ToDirectory;
+import com.pibox.data.dto.ToRepository;
 import org.junit.Test;
 
 /**
@@ -20,10 +21,17 @@ public class MacOsRepositoryTest {
 
     @Test
     public void createEmptyRepositoryTest() {
-        PiCReposistory repository = new PiCReposistory();
+        ToDirectory mainDir = new ToDirectory();
+        mainDir.setName("testRepository");
 
-        IRepositoryManager macOsRepository = new MacOsRepositoryManager();
-        macOsRepository.createRespository(repository);
+        ToRepository repository = new ToRepository();
+        repository.setMainDir(mainDir);
+
+
+//        PiCReposistory repository = new PiCReposistory();
+
+//        IRepositoryManager macOsRepository = new MacOsRepositoryManager();
+//        macOsRepository.createRespository(repository);
 
 
 //        InputStream configStream = new FileInputStream(new File("pibox.config"));

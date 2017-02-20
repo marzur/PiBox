@@ -1,4 +1,4 @@
-package com.pibox.core.macos;
+package com.pibox.core.repository.macos;
 
 import com.pibox.core.repository.IRepositoryManager;
 import com.pibox.data.dto.ToRepository;

@@ -12,7 +12,11 @@ public interface IRepositoryManager {
     /**
      * Method to create physically a simple repository
      *
+     * 1. Create directory
+     * 2. Set up permission to this directory
+     *
      * @param repository
      */
     void createRespository(ToRepository repository);
+
 }
