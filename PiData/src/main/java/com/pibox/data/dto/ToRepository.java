@@ -17,6 +17,11 @@ public class ToRepository {
     private String id;
 
     /**
+     * Repository version
+     */
+    private ToRepository repositoryVersion;
+
+    /**
      * Main directory
      */
     private ToDirectory mainDir;
@@ -40,6 +45,7 @@ public class ToRepository {
      * List of replicas (addresses)
      */
     private List<ToReplica> replicaList;
+
 
     public String getId() {
         return id;
@@ -95,6 +101,15 @@ public class ToRepository {
         return this;
     }
 
+    public ToRepository getRepositoryVersion() {
+        return repositoryVersion;
+    }
+
+    public ToRepository setRepositoryVersion(ToRepository repositoryVersion) {
+        this.repositoryVersion = repositoryVersion;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "ToRepository{" +
@@ -103,6 +118,7 @@ public class ToRepository {
                 ", repositoryName='" + repositoryName + '\'' +
                 ", owner=" + owner +
                 ", dateCreated=" + dateCreated +
+                ", repositoryVersion=" + repositoryVersion +
                 '}';
     }
 

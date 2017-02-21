@@ -42,7 +42,7 @@ public class YamlTool {
             Integer isIndexed = isIndexed(key);
             if (isIndexed != null) {
                 key = key.substring(0, key.lastIndexOf("["));
-                currentValue = getItem(currentMap, key, isIndexed);
+                currentValue = getCollectionItem(currentMap, key, isIndexed);
             } else {
                 currentValue = currentMap.get(key);
             }
@@ -59,7 +59,7 @@ public class YamlTool {
         return null;
     }
 
-    public static Object getItem(Map<String, Object> yamlMap, String key, int index) {
+    public static Object getCollectionItem(Map<String, Object> yamlMap, String key, int index) {
         Object o = yamlMap.get(key);
         if (o instanceof Collection) {
             Collection collection = (Collection) o;
