@@ -13,6 +13,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
@@ -45,6 +46,19 @@ public class MacOsRepositoryTest {
 
         ToRepository repository = new ToRepository();
         repository.setMainDir(mainDir);
+
+        MacOsRepositoryManager repositoryManager = (MacOsRepositoryManager) repositoryFactory.getRepositoryManager();
+        assertNotNull(repositoryManager.getRepositoryFactory());
+        assertEquals(repositoryManager.getRepositoryFactory(), repositoryFactory);
+
+        repositoryManager.createRespository(repository);
+        repository.getMainDir();
+
+
+
+
+
+
 
 
 //        PiCReposistory repository = new PiCReposistory();

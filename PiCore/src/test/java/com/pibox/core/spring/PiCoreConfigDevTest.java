@@ -5,7 +5,7 @@ import com.pibox.core.repository.linux.LinuxRepositoryFactory;
 import com.pibox.core.repository.macos.MacOsRepositoryFactory;
 import com.pibox.core.repository.windows.WindowsRepositoryFactory;
 import com.picode.pitool.messages.MessagesTool;
-import com.picode.pitool.messages.OsCheckTool;
+import com.picode.pitool.os.OsCheckTool;
 import com.picode.pitool.yaml.YamlTool;
 import org.junit.Test;
 import org.junit.runner.RunWith;

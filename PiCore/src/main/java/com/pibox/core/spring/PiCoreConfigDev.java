@@ -1,18 +1,13 @@
 package com.pibox.core.spring;
 
 import com.pibox.core.repository.IRepositoryFactory;
-import com.pibox.core.repository.IRepositoryManager;
 import com.pibox.core.repository.linux.LinuxRepositoryFactory;
-import com.pibox.core.repository.linux.LinuxRepositoryManager;
 import com.pibox.core.repository.macos.MacOsRepositoryFactory;
-import com.pibox.core.repository.macos.MacOsRepositoryManager;
 import com.pibox.core.repository.windows.WindowsRepositoryFactory;
-import com.pibox.core.repository.windows.WindowsRepositoryManager;
 import com.picode.pitool.messages.MessagesTool;
-import com.picode.pitool.messages.OsCheckTool;
+import com.picode.pitool.os.OsCheckTool;
 import com.picode.pitool.yaml.YamlTool;
 import org.apache.commons.io.FilenameUtils;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -63,7 +58,7 @@ public class PiCoreConfigDev implements PiCoreConfig {
     }
 
     /**
-     * Messages tool to manage massages in the module
+     * Messages tool is used to manage massages in the module
      *
      * @return
      * @throws IOException

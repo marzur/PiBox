@@ -4,4 +4,6 @@ include 'PiData'
 include 'PiInstaller'
 include 'PiTools'
 include 'PiTool'
+include 'PiFS'
+include 'PiFS-Ceph'
 

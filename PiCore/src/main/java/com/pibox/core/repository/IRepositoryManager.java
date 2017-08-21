@@ -10,7 +10,7 @@ import com.pibox.data.dto.ToRepository;
 public interface IRepositoryManager {
 
     /**
-     * Method to create physically a simple repository
+     * Method to create physically a simple repository (create mainDir)
      * <p>
      * 1. Create directory
      * 2. Set up permission to this directory

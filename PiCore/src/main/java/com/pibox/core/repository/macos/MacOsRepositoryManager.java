@@ -1,5 +1,6 @@
 package com.pibox.core.repository.macos;
 
+import com.pibox.core.repository.ARepositoryManager;
 import com.pibox.core.repository.IRepositoryFactory;
 import com.pibox.core.repository.IRepositoryManager;
 import com.pibox.data.dto.ToRepository;
@@ -8,10 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * Created by Marcin on 26.07.2016.
  */
-public class MacOsRepositoryManager implements IRepositoryManager {
+public class MacOsRepositoryManager extends ARepositoryManager {
 
-    @Autowired
-    private IRepositoryFactory repositoryFactory;
+    public MacOsRepositoryManager(IRepositoryFactory repositoryFactory) {
+        super(repositoryFactory);
+    }
 
     @Override
     public void createRespository(ToRepository repository) {

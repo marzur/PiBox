@@ -1,16 +1,41 @@
 group 'pl.picode'
 
 repositories {
+
 }
 
 dependencies {
 
 }
 
+/**
+ * VERSION
+ */
+
 ext.versionFile = file('version.properties') // properties contains version of application
 
 task loadVersion {
     project.version = readVersion()
+}
+
+class ProjectVersion {
+    Integer major
+    Integer minor
+    Boolean release
+
+    ProjectVersion(Integer major, Integer minor, Boolean release) {
+        this.major = major
+        this.minor = minor
+        this.release = release
+    }
+
+    ProjectVersion(Integer major, Integer minor) {
+        this(major, minor, false)
+    }
+
+    String toString() {
+        "$major.$minor${release ? '' : '-SNAPSHOT'}"
+    }
 }
 
 ProjectVersion readVersion() {
@@ -34,26 +59,9 @@ task wrapper(type: Wrapper) {
     gradleVersion = '3.0'
 }
 
-class ProjectVersion {
-    Integer major
-    Integer minor
-    Boolean release
-
-    ProjectVersion(Integer major, Integer minor, Boolean release) {
-        this.major = major
-        this.minor = minor
-        this.release = release
-    }
-
-    ProjectVersion(Integer major, Integer minor) {
-        this(major, minor, false)
-    }
-
-    String toString() {
-        "$major.$minor${release ? '' : '-SNAPSHOT'}"
-    }
-}
-
+/**
+ * Gradle learning
+ */
 task first << { println "first" }
 task second << { println "second" }
 
